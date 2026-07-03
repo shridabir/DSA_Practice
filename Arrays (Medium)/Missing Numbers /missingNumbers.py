@@ -32,8 +32,8 @@ def missingNumbers(nums):
         else:
             foundSecondHalf += num
 
-    expectedFirstHalf = sum(range(1, averageMissingValue + 1))
-    expectedSecondHalf = sum(range(averageMissingValue + 1, len(nums) + 3))
+    expectedFirstHalf = sum(range(1, averageMissingValue + 1)) #until avg value
+    expectedSecondHalf = sum(range(averageMissingValue + 1, len(nums) + 3)) #from value next to avg value
 
     return [expectedFirstHalf - foundFirstHalf, expectedSecondHalf - foundSecondHalf]
     return []
