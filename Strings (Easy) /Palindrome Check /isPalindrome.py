@@ -1,6 +1,8 @@
 def isPalindrome(string):
     # Write your code here.
 
+    #TC: O(n) and SC: O(1)
+
     left = 0
     right = len(string) - 1
 
