@@ -33,7 +33,6 @@ def countCharFrequency(character, target):
         if character in alreadyCounted:
             continue
 
-    for character in document:
         documentFrequency = countCharFrequency(character, document)
         charactersFrequency = countCharFrequency(character, characters)
 
