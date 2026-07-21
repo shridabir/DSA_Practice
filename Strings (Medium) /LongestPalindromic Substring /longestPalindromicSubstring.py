@@ -14,7 +14,7 @@ def longestPalindromicSubstring(string):
         longest = max(odd, even, key = lambda x: x[1] - x[0]) #check who is longest based on length) by taking differnce betn value at idx 1 and idx 0
         currentLongest = max(longest, currentLongest, key = lambda x: x[1] - x[0])
 
-    #slice the longest palindrome
+    #slice the longest palindrome - helper function holds the exact indexes of palindrome. As upper bound of slicing is exclusive we do currentLongest[1] + 1
     return string[currentLongest[0] : currentLongest[1] + 1]
 
 #implements expansion from middle logic
@@ -28,5 +28,7 @@ def getLongestPalindromeFrom(string, leftidx, rightidx):
         leftidx -= 1
         rightidx += 1
 
-    #return indices
+    #return indices - if string is palindrome, leftidx keeps going to left and rightidx keeps going right. 
+    #Because this happens at the end of a successful check, the pointers move one step past the actual palindrome before the loop runs its next check
+    #therefore
     return [leftidx + 1, rightidx - 1]
